@@ -1,12 +1,19 @@
-# Slimefun4 Addon
-This is an example Repository for a generic Slimefun4 Addon.
-In the top left is a button "Use this template", click this to create your own Addon for Slimefun4 using this basic template.
+# DyedBackpacks
+A brand new Slimefun addon adding the ability to dye your beloved backpacks!
+- Dye all your backpacks by using the wools with the wanted color.
+- Supports all 16 Minecraft default colors.
+- Extensive configuration options! Disable/Enable backpack coloring per level.
 
-## Changing some important things
-Naivagte to `src/main/java` and rename the package and the .java File to your liking.
-Suggestion: "me.(Your name).(Your Project's name)" (all lower case) and "ProjectName.java"
+## Download DyedBackpacks
+Download the latest development version from the link given below.
 
-Navigate to `src/main/resources/plugin.yml` and change the "author" and "main" attributes.
-You may also want to change the description to something meaningful.
+[Development Builds](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/DyedBackpacks/master/)
 
-Navigate to `pom.xml` and change the group id to "me.(Your name)" and change the arficact id to the name of your Project.
+<p align="center">
+  <a href="https://thebusybiscuit.github.io/builds/TheBusyBiscuit/DyedBackpacks/master/">
+    <img src="https://thebusybiscuit.github.io/builds/TheBusyBiscuit/DyedBackpacks/master/badge.svg" alt="Build Server"/>
+  </a>
+</p>
+
+You can also find the most recent development builds for all my other Plugins (including Slimefun Addons) on here:
+https://thebusybiscuit.github.io/builds/
