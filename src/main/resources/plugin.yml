@@ -1,10 +1,10 @@
-name: SlimefunAddon
+name: DyedBackpacks
 version: ${project.version}
-author: CHANGEME
-description: A generic Slimefun-Addon
-website: https://github.com/TheBusyBiscuit/Slimefun4-Addon
+author: TheBusyBiscuit
+description: A Slimefun Addon that adds dyed backpacks
+website: https://github.com/TheBusyBiscuit/DyedBackpacks
 
-main: me.CHANGEME.slimefunaddon.SlimefunAddon
+main: io.github.thebusybiscuit.dyedbackpacks.DyedBackpacks
 depend: [Slimefun]
 
 api-version: 1.14
