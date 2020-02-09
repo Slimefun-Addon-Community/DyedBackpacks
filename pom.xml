@@ -46,7 +46,7 @@
   	<dependency>
   		<groupId>org.bukkit</groupId>
   		<artifactId>bukkit</artifactId>
-  		<version>1.14.4-R0.1-SNAPSHOT</version>
+  		<version>1.15.2-R0.1-SNAPSHOT</version>
   		<scope>provided</scope>
   	</dependency>
   	<dependency>
@@ -58,7 +58,7 @@
   	<dependency>
   		<groupId>com.github.TheBusyBiscuit</groupId>
   		<artifactId>Slimefun4</artifactId>
-  		<version>fb652fe41d</version>
+  		<version>cb2e12946f</version>
   		<scope>provided</scope>
   	</dependency>
   </dependencies>
