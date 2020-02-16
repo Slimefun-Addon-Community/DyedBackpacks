@@ -3,6 +3,7 @@ package io.github.thebusybiscuit.dyedbackpacks;
 import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.Item.CustomItem;
 import me.mrCookieSlime.Slimefun.Lists.SlimefunItems;
 import me.mrCookieSlime.Slimefun.Objects.Category;
@@ -13,7 +14,7 @@ import me.mrCookieSlime.Slimefun.cscorelib2.config.Config;
 import me.mrCookieSlime.Slimefun.cscorelib2.skull.SkullItem;
 import me.mrCookieSlime.Slimefun.cscorelib2.updater.GitHubBuildsUpdater;
 
-public class DyedBackpacks extends JavaPlugin {
+public class DyedBackpacks extends JavaPlugin implements SlimefunAddon {
 	
 	@Override
 	public void onEnable() {
@@ -43,7 +44,17 @@ public class DyedBackpacks extends JavaPlugin {
 			SlimefunItemStack item = new SlimefunItemStack("DYED_" + backpack.getItemID() + "_" + color.name(), color.getTexture(), backpack.getItemMeta().getDisplayName() + " &7(" + color.getName() + "&7)", backpack.getItemMeta().getLore().toArray(new String[0]));
 			DyedBackpack dyed = new DyedBackpack(size, category, item, backpack, color);
 			research.addItems(dyed);
-			dyed.register();
+			dyed.register(this);
 		}
+	}
+
+	@Override
+	public String getBugTrackerURL() {
+		return "https://github.com/TheBusyBiscuit/DyedBackpacks/issues";
+	}
+
+	@Override
+	public JavaPlugin getJavaPlugin() {
+		return this;
 	}
 }
