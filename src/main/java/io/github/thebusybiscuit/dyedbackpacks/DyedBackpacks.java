@@ -29,12 +29,12 @@ public class DyedBackpacks extends JavaPlugin implements SlimefunAddon {
 
         Category category = new Category(new NamespacedKey(this, "dyed_backpacks"), new CustomItem(SkullItem.fromBase64(BackpackColor.RED.getTexture()), "&4Dyed Backpacks"));
 
-        if (cfg.getBoolean("backpacks.small")) createBackpacks(category, research, (SlimefunItemStack) SlimefunItems.BACKPACK_SMALL, 9);
-        if (cfg.getBoolean("backpacks.normal")) createBackpacks(category, research, (SlimefunItemStack) SlimefunItems.BACKPACK_MEDIUM, 18);
-        if (cfg.getBoolean("backpacks.large")) createBackpacks(category, research, (SlimefunItemStack) SlimefunItems.BACKPACK_LARGE, 27);
-        if (cfg.getBoolean("backpacks.woven")) createBackpacks(category, research, (SlimefunItemStack) SlimefunItems.WOVEN_BACKPACK, 36);
-        if (cfg.getBoolean("backpacks.gilded")) createBackpacks(category, research, (SlimefunItemStack) SlimefunItems.GILDED_BACKPACK, 45);
-        if (cfg.getBoolean("backpacks.radiant")) createBackpacks(category, research, (SlimefunItemStack) SlimefunItems.RADIANT_BACKPACK, 54);
+        if (cfg.getBoolean("backpacks.small")) createBackpacks(category, research, SlimefunItems.BACKPACK_SMALL, 9);
+        if (cfg.getBoolean("backpacks.normal")) createBackpacks(category, research, SlimefunItems.BACKPACK_MEDIUM, 18);
+        if (cfg.getBoolean("backpacks.large")) createBackpacks(category, research, SlimefunItems.BACKPACK_LARGE, 27);
+        if (cfg.getBoolean("backpacks.woven")) createBackpacks(category, research, SlimefunItems.WOVEN_BACKPACK, 36);
+        if (cfg.getBoolean("backpacks.gilded")) createBackpacks(category, research, SlimefunItems.GILDED_BACKPACK, 45);
+        if (cfg.getBoolean("backpacks.radiant")) createBackpacks(category, research, SlimefunItems.RADIANT_BACKPACK, 54);
 
         research.register();
     }
