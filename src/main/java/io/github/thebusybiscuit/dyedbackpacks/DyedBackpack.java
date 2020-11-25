@@ -7,7 +7,6 @@ import io.github.thebusybiscuit.slimefun4.implementation.items.backpacks.Slimefu
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.Category;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
-import me.mrCookieSlime.Slimefun.cscorelib2.materials.MaterialCollections;
 
 public class DyedBackpack extends SlimefunBackpack {
 
@@ -16,7 +15,7 @@ public class DyedBackpack extends SlimefunBackpack {
     }
 
     private static ItemStack[] createRecipe(SlimefunItemStack backpack, BackpackColor color) {
-        ItemStack wool = new ItemStack(MaterialCollections.getAllWoolColors().get(color.ordinal()));
+        ItemStack wool = new ItemStack(color.getAsWool());
 
         return new ItemStack[] { wool, wool, wool, new ItemStack(Material.LEATHER), backpack, new ItemStack(Material.LEATHER), wool, wool, wool };
     }
