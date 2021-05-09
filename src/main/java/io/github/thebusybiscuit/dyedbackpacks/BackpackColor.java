@@ -1,5 +1,8 @@
 package io.github.thebusybiscuit.dyedbackpacks;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import org.bukkit.Material;
 
 public enum BackpackColor {
@@ -25,21 +28,25 @@ public enum BackpackColor {
     private final Material wool;
     private final String texture;
 
-    private BackpackColor(String name, Material wool, String texture) {
+    @ParametersAreNonnullByDefault
+    BackpackColor(String name, Material wool, String texture) {
         this.name = name;
         this.wool = wool;
         this.texture = texture;
     }
 
+    @Nonnull
     public String getName() {
         return name;
     }
 
+    @Nonnull
     public String getTexture() {
         return texture;
     }
-    
-    public Material getAsWool() {
+
+    @Nonnull
+    public Material getWoolMaterial() {
         return wool;
     }
 

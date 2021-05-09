@@ -1,5 +1,8 @@
 package io.github.thebusybiscuit.dyedbackpacks;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -10,14 +13,24 @@ import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 
 public class DyedBackpack extends SlimefunBackpack {
 
+    @ParametersAreNonnullByDefault
     public DyedBackpack(int size, Category category, SlimefunItemStack item, SlimefunItemStack backpack, BackpackColor color) {
         super(size, category, item, RecipeType.ENHANCED_CRAFTING_TABLE, createRecipe(backpack, color));
     }
 
+    @Nonnull
+    @ParametersAreNonnullByDefault
     private static ItemStack[] createRecipe(SlimefunItemStack backpack, BackpackColor color) {
-        ItemStack wool = new ItemStack(color.getAsWool());
+        ItemStack wool = new ItemStack(color.getWoolMaterial());
+        ItemStack leather = new ItemStack(Material.LEATHER);
 
-        return new ItemStack[] { wool, wool, wool, new ItemStack(Material.LEATHER), backpack, new ItemStack(Material.LEATHER), wool, wool, wool };
+        // @formatter:off
+        return new ItemStack[] { 
+            wool,    wool,     wool,
+            leather, backpack, leather,
+            wool,    wool,     wool
+        };
+        // @formatter:on
     }
 
 }
