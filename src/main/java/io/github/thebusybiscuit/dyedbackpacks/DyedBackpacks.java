@@ -16,6 +16,15 @@ import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
 import me.mrCookieSlime.Slimefun.cscorelib2.skull.SkullItem;
 import me.mrCookieSlime.Slimefun.cscorelib2.updater.GitHubBuildsUpdater;
 
+/**
+ * This is the main class of the {@link DyedBackpacks} addon.
+ * Here we initialize the different instances of {@link DyedBackpack}.
+ * 
+ * @author TheBusyBiscuit
+ * 
+ * @see DyedBackpack
+ *
+ */
 public class DyedBackpacks extends JavaPlugin implements SlimefunAddon {
 
     @Override

@@ -3,26 +3,39 @@ package io.github.thebusybiscuit.dyedbackpacks;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
+import org.bukkit.ChatColor;
+import org.bukkit.DyeColor;
 import org.bukkit.Material;
 
+/**
+ * This enum holds the different colors of a {@link DyedBackpack}.
+ * It is similar to the {@link DyeColor} enum, as this is based off of the different colors
+ * of wool.
+ * 
+ * @author TheBusyBiscuit
+ * 
+ * @see DyedBackpack
+ * @see DyeColor
+ *
+ */
 public enum BackpackColor {
 
-    WHITE("&rWhite", Material.WHITE_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWJkZjhkNTNiZGI5MzJjMjIzYzYyN2JiYjhjMWUwYzVlMzUxYTYxNmNkODA1NjkyOWM2NmU2ZGNlNDQ0MzNkYiJ9fX0="),
-    ORANGE("&6Orange", Material.ORANGE_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTM3YTM1NTIyZjY3YjJhZjkyMzQ1NTkyODQ2YjcwMmI5YWZiOWQ3YzhkYmFkNWVhMTUwNjczYzllNDRkZTMifX19"),
-    MAGENTA("&dMagenta", Material.MAGENTA_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzY1NzVmY2NjYWRhZTg3YzA4NDJmNTNkZTVlMGZmYTc1ODUxNjk2ODY2ZDgxZTFiNzI4MjgzNDhkYjUyNTYifX19"),
-    LIGHT_BLUE("&bLight Blue", Material.LIGHT_BLUE_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTNjMTUzYzM5MWMzNGUyZDMyOGE2MDgzOWU2ODNhOWY4MmFkMzA0ODI5OWQ4YmM2YTM5ZTZmOTE1Y2M1YSJ9fX0="),
-    YELLOW("&eYellow", Material.YELLOW_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTI1NGFhY2JmNjIzMTc1ZmY5OGRmN2FlMzY2ZTBiODllOTE3MTM0NDE3NTJmM2NkZjk2NWYwMzhiMTc0YjUifX19"),
-    LIME("&aLime", Material.LIME_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTk5MDlhOTc3OWI5NDZiOTc4NzQ0MmZhNDgzYWY0ZGU0YjJmMTlmZDQwZGMyMzcwZjdhOWI4ZjUyMWYyMWRkYyJ9fX0"),
-    PINK("&dPink", Material.PINK_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmRkYWZkY2IxYThkZjQyNjIyOWQ3ODc5YjFlNGEzMzZmYzlhYjNiZGMxNDZiYjRlZDNiZTRiYmY3YjViODM1In19fQ=="),
-    DARK_GRAY("&8Dark Gray", Material.GRAY_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjUzNmFkOTc4ZTFjZTUwNTBmNDNiN2E2YjM4NTllYjQ5NDA2YjRmMTA0MzgwMmE3MTFjZGM4MGMwOTBjMzVkIn19fQ=="),
-    LIGHT_GRAY("&7Light Gray", Material.LIGHT_GRAY_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE1ZmM3NjM1Mjk2Y2ExODNmZDMwYjBmYjVmNGMxOGNmYzIxNjc2OGYwZmJlYmI4NjVlMDIxMWFiNDNiN2IifX19"),
-    CYAN("&3Cyan", Material.CYAN_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGY3MGZhYjMyNDZmZTAyN2NlMGJiYTg4NWE3M2M2ZTgyZDhmZjhmMzU4MjMxZTg0NjFmOTU2NTYwY2ZhNThmIn19fQ=="),
-    PURPLE("&5Purple", Material.PURPLE_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWViNjViYmU3NDQ5NDU4NDFlOTIzNGEzM2I1Y2U1Y2MyMzZmNmEyZmM5M2ExYTNhZTQyZGY3N2M5MDg0ZGYxZSJ9fX0="),
-    BLUE("&1Blue", Material.BLUE_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODIyNGIyYzczOTFlYjViZmNiMjc4NDMxZDVjODI3Y2IyNjM0OTUyNmM3YmM1MzViMWU5NWY2ZGY5ZjNmZGYzIn19fQ=="),
-    BROWN("&6Brown", Material.BROWN_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWZiNmEzZDdkYmE5N2JiNmU3Zjc5YTE1NjI3YWVjNjM2OTc5MTIzM2Y4MzNmYTc0OWVmMjFiZWQ3OWU1OWU5OCJ9fX0="),
-    GREEN("&2Green", Material.GREEN_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjhhMTI3ZjFjZmQ3OTk4NmU3YmQ5NWQ5MmRlNGY0ZjY4MDQwZTRmODk5ZjgxYjFmOGYzY2ExNWI2NGY1MGYzIn19fQ=="),
-    RED("&4Red", Material.RED_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODVlNGY5ZGE2OGM4MWZhNDgxZWVjZGNhNDhhMTM4Y2VjZGUyY2RkZmZlZWFlODRhYjFhZmQyNGEzNjNlMDI4In19fQ=="),
-    BLACK("&8Black", Material.BLACK_WOOL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTlhYjFmZGNiZTg3OGQxZTU1YmRkNDNjZWJjNWU0MzgzNmE2ZGE2OTU0MWY0YTIzM2ZlODhmMTMwNTY2OCJ9fX0=");
+    WHITE(ChatColor.WHITE + "White", Material.WHITE_WOOL, "ebdf8d53bdb932c223c627bbb8c1e0c5e351a616cd8056929c66e6dce44433db"),
+    ORANGE(ChatColor.GOLD + "Orange", Material.ORANGE_WOOL, "a37a35522f67b2af92345592846b702b9afb9d7c8dbad5ea150673c9e44de3"),
+    MAGENTA(ChatColor.LIGHT_PURPLE + "Magenta", Material.MAGENTA_WOOL, "36575fcccadae87c0842f53de5e0ffa75851696866d81e1b72828348db5256"),
+    LIGHT_BLUE(ChatColor.AQUA + "Light Blue", Material.LIGHT_BLUE_WOOL, "a3c153c391c34e2d328a60839e683a9f82ad3048299d8bc6a39e6f915cc5a"),
+    YELLOW(ChatColor.YELLOW + "Yellow", Material.YELLOW_WOOL, "a254aacbf623175ff98df7ae366e0b89e91713441752f3cdf965f038b174b5"),
+    LIME(ChatColor.GREEN + "Lime", Material.LIME_WOOL, "a9909a9779b946b9787442fa483af4de4b2f19fd40dc2370f7a9b8f521f21ddc"),
+    PINK(ChatColor.LIGHT_PURPLE + "Pink", Material.PINK_WOOL, "bddafdcb1a8df426229d7879b1e4a336fc9ab3bdc146bb4ed3be4bbf7b5b835"),
+    DARK_GRAY(ChatColor.DARK_GRAY + "Dark Gray", Material.GRAY_WOOL, "6536ad978e1ce5050f43b7a6b3859eb49406b4f1043802a711cdc80c090c35d"),
+    LIGHT_GRAY(ChatColor.GRAY + "Light Gray", Material.LIGHT_GRAY_WOOL, "5a5fc7635296ca183fd30b0fb5f4c18cfc216768f0fbebb865e0211ab43b7b"),
+    CYAN(ChatColor.DARK_AQUA + "Cyan", Material.CYAN_WOOL, "df70fab3246fe027ce0bba885a73c6e82d8ff8f358231e8461f956560cfa58f"),
+    PURPLE(ChatColor.DARK_PURPLE + "Purple", Material.PURPLE_WOOL, "5eb65bbe744945841e9234a33b5ce5cc236f6a2fc93a1a3ae42df77c9084df1e"),
+    BLUE(ChatColor.DARK_BLUE + "Blue", Material.BLUE_WOOL, "8224b2c7391eb5bfcb278431d5c827cb26349526c7bc535b1e95f6df9f3fdf3"),
+    BROWN(ChatColor.GOLD + "Brown", Material.BROWN_WOOL, "efb6a3d7dba97bb6e7f79a15627aec6369791233f833fa749ef21bed79e59e98"),
+    GREEN(ChatColor.DARK_GREEN + "Green", Material.GREEN_WOOL, "28a127f1cfd79986e7bd95d92de4f4f68040e4f899f81b1f8f3ca15b64f50f3"),
+    RED(ChatColor.DARK_RED + "Red", Material.RED_WOOL, "85e4f9da68c81fa481eecdca48a138cecde2cddffeeae84ab1afd24a363e028"),
+    BLACK(ChatColor.DARK_GRAY + "Black", Material.BLACK_WOOL, "a9ab1fdcbe878d1e55bdd43cebc5e43836a6da69541f4a233fe88f1305668");
 
     private final String name;
     private final Material wool;
